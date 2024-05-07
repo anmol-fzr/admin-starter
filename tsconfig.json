@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Compile to modern ECMAScript standard
+    "useDefineForClassFields": true, // Allow field decoration
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Include necessary libraries
+    "module": "ESNext", // Use ES modules for modern bundlers
+    "skipLibCheck": true, // Skip checking for errors in ambient libraries (if applicable)
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true, // Don't generate JavaScript files (bundler takes care)
+    "jsx": "react-jsx", // Compile JSX using the React JSX transform
+
+    /* Strictness and Linting */
+    "strict": true, // Enable all strictness flags
+    "noImplicitAny": true, // Disallow implicit `any` type
+    "strictNullChecks": true, // Enforce nullish checks
+    "noUnusedLocals": true, // Warn about unused variables
+    "noUnusedParameters": true, // Warn about unused function parameters
+    "noFallthroughCasesInSwitch": true, // Warn about fall-through in switch statements
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file naming case
+    "noImplicitReturns": true, // Warn about missing function return statements
+    "noImplicitThis": true, // Disallow implicit `this` type
+    "alwaysStrict": true, // Enforce strict mode in modules
+    "noImplicitOverride": true, // Warn about implicit overrides in derived classes
+    "experimentalDecorators": true, // Allow experimental decorator support (if needed)
+    "emitDecoratorMetadata": true, // Emit decorator metadata for reflection (if needed)
+
+    /* Warnings and Errors */
+    "allowJs": true, // Allow importing JavaScript files (but type them!)
+
+    "outDir": "./dist/",
+
+    /* Path mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "typeRoots": ["./node_modules/@types", "./index.d.ts"],
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
